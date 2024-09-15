@@ -1,10 +1,10 @@
 class House:
-    houses_history = ()
+    houses_history = []
 
     def __new__(cls, *args, **kwargs):
-        print(f'Должно быть:  {args[0]}')
-        cls.houses_history += args
-        # houses_history.append(args[0])
+        # print(f'Должно быть:  {args[0]}')
+        # cls.houses_history += args
+        cls.houses_history.append(args[0])
         return object.__new__(cls)
 
     def __init__(self, name, number_of_floors):
